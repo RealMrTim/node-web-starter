@@ -1,0 +1,33 @@
+body {
+    overflow: hidden;
+
+    /* Gradient taken from: https://uigradients.com/#Earthly */
+
+    /* fallback for old browsers */
+    background: #649173;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to left, #DBD5A4, #649173);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, #DBD5A4, #649173); 
+}
+
+p.text-content {
+    font-family: monospace;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+p.text-large {
+    font-size: 75px;
+    padding: 80px;
+}
+
+p.text-small {
+    font-size: 18px;
+    margin: 10px;
+}
+
+p.text-error {
+    color: #963d3d;
+}

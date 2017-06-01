@@ -1,0 +1,33 @@
+{
+  "name": "node-web-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client:static-server": "http-server -a localhost -p 8080 src/client/static",
+    "client:package-server": "webpack-dev-server --progress --colors --port 8081",
+    "client-file-host": "concurrently \"npm run client:package-server\" \"npm run client:static-server\"",
+    "server:build": "tsc --project ./src/server/",
+    "server:run": "node ./out/server/server.entry.js",
+    "server-application": "npm run server:build && npm run server:run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "github.com/RealMrTim",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "http-server": "^0.10.0",
+    "source-map-loader": "^0.2.1",
+    "ts-loader": "^2.1.0",
+    "typescript": "^2.3.4",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "@types/express": "^4.0.35",
+    "@types/ws": "0.0.41",
+    "express": "^4.15.3",
+    "rxjs": "^5.4.0",
+    "ws": "^3.0.0"
+  }
+}
